@@ -14,6 +14,11 @@ import { CartService } from '../cart.service';
 export class ProductDetailsComponent implements OnInit {
   product;
 
+constructor(
+    private route: ActivatedRoute,
+    private cartService: CartService
+  ) { }
+
   addToCart(product) {
     window.alert('Your product has been added to the cart!');
     this.cartService.addToCart(product);
@@ -24,14 +29,4 @@ export class ProductDetailsComponent implements OnInit {
     this.product = products[+params.get('productNumber')];
   });
 }
-
-
-
-constructor(
-    private route: ActivatedRoute,
-    private cartService: CartService
-  ) { }
-  
-
-
 }

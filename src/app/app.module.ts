@@ -17,7 +17,7 @@ import { CartService } from './cart.service';
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productNumber', component: ProductDetailsComponent },
-      { path: 'cart', component: CartComponent },
+     // { path: 'cart', component: CartComponent },
     ])
   ],
   declarations: [
